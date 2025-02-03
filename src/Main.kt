@@ -34,4 +34,38 @@ fun main() {
     println(mutableJuiceMenu.containsKey("kiwi"))
     println(mutableJuiceMenu.keys)
     println(mutableJuiceMenu.values)
+
+    // if and when
+    val n: Int
+    val bool = true
+
+    if (bool) {
+        n = 1
+        println(n)
+    } else {
+        n = 2
+        println(n)
+    }
+
+    println(if (bool) 1 else 2) // there is no "?" in kotlin, gotta use if as an expression
+
+    // should use "when" in conditional expressions with multiple branches
+    val obj = "Hello"
+
+    when (obj) {
+        "1" -> println("One")
+        "Hello" -> println("Greeting")
+        else -> println("Unknown")
+    }
+
+    val trafficLightState = "Red"
+
+    val trafficAction = when {
+        trafficLightState == "Green" -> "Go"
+        trafficLightState == "Yellow" -> "Slow down"
+        trafficLightState == "Red" -> "Stop"
+        else -> "Malfunction"
+    }
+
+    println(trafficAction)
 }
